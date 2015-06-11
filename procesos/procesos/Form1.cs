@@ -81,6 +81,7 @@ namespace procesos
 
         //Contar bloques disponibles (Boton Ejecutar)
         static int cBloques;
+        static int rBloques;
         #endregion
 
 
@@ -119,26 +120,39 @@ namespace procesos
                     //Contar Cuantos bloques diponibles hay
                     foreach (DataGridViewRow row in dgvProceso.Rows)
                     {
-                        cBloques++;
+                        if (row.Cells[0].Value.Equals(cboProceso.SelectedItem.ToString()))
+                        {
+                            cBloques++;
+                        }
+                        rBloques++;
                     }
-                    if (cBloques.Equals(8))
+
+                    //if (cBloques<=8)
+                    //{
+                    //    usados -= tpro;
+                    //    esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
+                    //    esperaProceso = cboProceso.SelectedItem.ToString();
+                    //    lblEspera.Items.Add(esperaProceso);
+                    //    lblEjecucion.Items.Add(esperaProceso);
+                    //    int r = lblEjecucion.Items.Count;
+
+                    //    lblEjecucion.Items.Remove("D");
+                
+                    //}
+
+                    lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
+                    if (!cBloques.Equals(8))
                     {
                         usados -= tpro;
                         esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
                         esperaProceso = cboProceso.SelectedItem.ToString();
                         lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
-                        lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());   
+                        lblEjecucion.Items.Remove(cboProceso.SelectedItem.ToString());
+                        MessageBox.Show(cBloques.ToString());
+                        MessageBox.Show(rBloques.ToString());
                     }
-                
+                   
 
-                    //if (!cBloques.Equals(8))
-                    //{
-                    //    usados -= tpro;
-                    //    esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
-                    //    esperaProceso = cboProceso.SelectedItem.ToString();
-                    //    lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
-                    //    MessageBox.Show("condicion arregla 3 3 2");
-                    //}
                     //else
                     //{
                     //    usados -= tpro;
@@ -169,7 +183,6 @@ namespace procesos
                     //    //    lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
                     //    //}
                     //}
-                    MessageBox.Show(cBloques.ToString());
                     MessageBox.Show("Lleno");
                 }
 
