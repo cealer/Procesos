@@ -43,7 +43,6 @@
             this.dgvProceso = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEjecutar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProceso)).BeginInit();
@@ -83,7 +82,6 @@
             this.cboProceso.Name = "cboProceso";
             this.cboProceso.Size = new System.Drawing.Size(51, 21);
             this.cboProceso.TabIndex = 2;
-            this.cboProceso.SelectedIndexChanged += new System.EventHandler(this.cboProceso_SelectedIndexChanged);
             // 
             // cboPagina
             // 
@@ -100,7 +98,6 @@
             this.cboTermino.Name = "cboTermino";
             this.cboTermino.Size = new System.Drawing.Size(51, 21);
             this.cboTermino.TabIndex = 4;
-            this.cboTermino.SelectedIndexChanged += new System.EventHandler(this.cboTermino_SelectedIndexChanged);
             // 
             // btnIniciar
             // 
@@ -189,22 +186,11 @@
             this.btnEjecutar.UseVisualStyleBackColor = true;
             this.btnEjecutar.Click += new System.EventHandler(this.btnEjecutar_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(94, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 54);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 502);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEjecutar);
             this.Controls.Add(this.dgvProceso);
             this.Controls.Add(this.groupBox2);
@@ -245,7 +231,6 @@
         private System.Windows.Forms.DataGridView dgvProceso;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button btnEjecutar;
-        private System.Windows.Forms.Button button1;
     }
 }
 

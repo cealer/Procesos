@@ -28,3 +28,9 @@ C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.cs
 C:\Users\Cesar\Desktop\trabajo\procesos\procesos\bin\Debug\procesos.exe.config
 C:\Users\Cesar\Desktop\trabajo\procesos\procesos\obj\Debug\procesos.exe
 C:\Users\Cesar\Desktop\trabajo\procesos\procesos\obj\Debug\procesos.pdb
+C:\Users\Cesar\Desktop\trabajo\procesos\procesos\bin\Debug\procesos.exe
+C:\Users\Cesar\Desktop\trabajo\procesos\procesos\bin\Debug\procesos.pdb
+C:\Users\Cesar\Desktop\trabajo\procesos\procesos\obj\Debug\procesos.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Desktop\trabajo\procesos\procesos\obj\Debug\procesos.Form1.resources
+C:\Users\Cesar\Desktop\trabajo\procesos\procesos\obj\Debug\procesos.Properties.Resources.resources
+C:\Users\Cesar\Desktop\trabajo\procesos\procesos\obj\Debug\procesos.csproj.GenerateResource.Cache

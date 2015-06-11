@@ -20,6 +20,7 @@ namespace procesos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            #region Llenado de procesos
             //Llenar el combobox Proceso
             cboProceso.Items.Add("A");
             cboProceso.Items.Add("B");
@@ -29,6 +30,27 @@ namespace procesos
             cboProceso.Items.Add("F");
             cboProceso.Items.Add("G");
             cboProceso.Items.Add("H");
+            cboProceso.Items.Add("I");
+            cboProceso.Items.Add("J");
+            cboProceso.Items.Add("K");
+            cboProceso.Items.Add("L");
+            cboProceso.Items.Add("M");
+            cboProceso.Items.Add("N");
+            cboProceso.Items.Add("O");
+            cboProceso.Items.Add("P");
+            cboProceso.Items.Add("Q");
+            cboProceso.Items.Add("R");
+            cboProceso.Items.Add("S");
+            cboProceso.Items.Add("T");
+            cboProceso.Items.Add("U");
+            cboProceso.Items.Add("V");
+            cboProceso.Items.Add("W");
+            cboProceso.Items.Add("X");
+            cboProceso.Items.Add("Y");
+            cboProceso.Items.Add("Z");
+            #endregion
+
+            #region Llenado de tiempo de pagina | Espacios de llenado de procesos
             //LLenar el combobox Tiempo
             for (int i = 1; i < 9; i++)
             {
@@ -37,31 +59,44 @@ namespace procesos
                 //Iniciando Filas para los procesos
                 dgvProceso.Rows.Add("0");
             }
+            #endregion
         }
+
+        #region Varaibles utilizadas
         //Contandor usado para colorear
         int c = 0;
+        //Cuantos procesos se estan usados
         int usados = 0;
-        //Variable para Espera Procesos
+        //Variables para Espera Procesos
         static int esperaTiempo;
         static string esperaProceso;
 
         //Boton Inicar Procesos
         //t de pagina
-       static int tpagEspera = 0;
+        static int tpagEspera = 0;
         //Contar cuantos procesos han entrado
-      static  int cProcesos = 0;
+        static int cProcesos = 0;
         //Contar cuantos procesos falta ingresar a la pila
-       static int cProcesosPendiente =0;
+        static int cProcesosPendiente = 0;
 
         //Contar bloques disponibles (Boton Ejecutar)
-       static int cBloques;
+        static int cBloques;
+        #endregion
 
-        //Contar Bloques 
-        static int cBloqueEjecucion;
+
+        void ContadorProcesos()
+        {
+            foreach (DataGridViewRow row in dgvProceso.Rows)
+            {
+                if (row.Cells[0].Value.Equals(cboProceso.SelectedItem.ToString()))
+                {
+                    cBloques++;
+                }
+            }
+        }
 
         void Ejecucion(int tpro, string op)
         {
-
             //Se reinicia el contador
             c = 0;
             //COndicion para trabajar solo con 8 procesos
@@ -73,46 +108,72 @@ namespace procesos
                 {
                     //Se agrega el proceso al listbox teniendo en cuenta que escogió en el combobox
                     lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
+
+
                     //Se agrega como un proceso a terminar
                     cboTermino.Items.Add(cboProceso.SelectedItem.ToString());
+
                 }
                 else
                 {
                     //Contar Cuantos bloques diponibles hay
                     foreach (DataGridViewRow row in dgvProceso.Rows)
                     {
-                        if (row.Cells[0].Value.Equals(cboProceso.SelectedItem.ToString()))
-                        {
-                            cBloques++;
-                        }
+                        cBloques++;
                     }
-                    usados -= tpro;
-                    esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
-                    esperaProceso = cboProceso.SelectedItem.ToString();
-                    lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
-                    
+                    if (cBloques.Equals(8))
+                    {
+                        usados -= tpro;
+                        esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
+                        esperaProceso = cboProceso.SelectedItem.ToString();
+                        lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
+                        lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());   
+                    }
+                
 
-                    //Contar Cuantos bloques
-                    foreach (DataGridViewRow row in dgvProceso.Rows)
-                    {
-                        if (row.Cells[0].Value.Equals(cboProceso.SelectedItem.ToString()))
-                        {
-                            cBloqueEjecucion++;
-                        }
-                    }
-                    if (cBloqueEjecucion.Equals(8))
-                    {
-                        lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
-                    }
-                    if (cProcesosPendiente > 0)
-                    {
-                        lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
-                    }
+                    //if (!cBloques.Equals(8))
+                    //{
+                    //    usados -= tpro;
+                    //    esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
+                    //    esperaProceso = cboProceso.SelectedItem.ToString();
+                    //    lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
+                    //    MessageBox.Show("condicion arregla 3 3 2");
+                    //}
+                    //else
+                    //{
+                    //    usados -= tpro;
+                    //    esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
+                    //    esperaProceso = cboProceso.SelectedItem.ToString();
+                    //    lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
+                    //    lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
+                    //    MessageBox.Show("condicion arregla 3 3 3");
+                    //}
+
+                    // if (!cBloques.Equals(8))
+                    //{
+                    //    usados -= tpro;
+                    //    esperaTiempo = Convert.ToInt32(cboPagina.SelectedItem.ToString());
+                    //    esperaProceso = cboProceso.SelectedItem.ToString();
+                    //    lblEspera.Items.Add(cboProceso.SelectedItem.ToString());
+                    //    //lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString()); 
+                    //    //Arregla 3 3 2
+                    //    if (cProcesosPendiente.Equals(0))
+                    //    {
+                    //        lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
+                    //    }
+                      
+                    //    ////Arregla 3 3 3
+                        
+                    //    // if(cBloques<8)
+                    //    //{
+                    //    //    lblEjecucion.Items.Add(cboProceso.SelectedItem.ToString());
+                    //    //}
+                    //}
+                    MessageBox.Show(cBloques.ToString());
                     MessageBox.Show("Lleno");
                 }
-           
-            }
 
+            }
             #region Proceso para colorear
             for (int i = 0; i < 8; i++)
             {
@@ -188,12 +249,7 @@ namespace procesos
                     borrar++;
                 }
             }
-            MessageBox.Show(borrar.ToString());
             usados = usados - borrar;
-            MessageBox.Show(usados.ToString());
-            // 
-            //MessageBox.Show(borrar.ToString());
-            //MessageBox.Show(usados.ToString());
         }
 
 
@@ -224,41 +280,8 @@ namespace procesos
                 }
                 cProcesosPendiente = tpagEspera - cProcesos;
                 Ejecucion(cProcesosPendiente, esperaProceso);
-                //Ejecucion(esperaTiempo, esperaProceso);
-                MessageBox.Show("Condicion");
             }
-     
-        }
 
-        private void cboProceso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboTermino_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-            //Obtener t de pagina para Espera 
-            tpagEspera = Convert.ToInt32(cboPagina.Text);
-
-            foreach (DataGridViewRow row in dgvProceso.Rows)
-            {
-                if (row.Cells[0].Value.Equals(cboProceso.SelectedItem.ToString()))
-                {
-                    cProcesos++;
-                }
-            }
-            cProcesosPendiente = tpagEspera - cProcesos;
-            MessageBox.Show("T pagina: " + tpagEspera.ToString());
-            MessageBox.Show("Procesos ingresados: " + cProcesos.ToString());
-            MessageBox.Show("Procesos pendientes: " + cProcesosPendiente.ToString());
-                   
         }
     }
 }
