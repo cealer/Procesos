@@ -1,0 +1,27 @@
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\bin\Debug\procesos.exe.config
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\bin\Debug\procesos.exe
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\bin\Debug\procesos.pdb
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\obj\Debug\procesos.csprojResolveAssemblyReference.cache
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\obj\Debug\procesos.Form1.resources
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\obj\Debug\procesos.Properties.Resources.resources
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\obj\Debug\procesos.csproj.GenerateResource.Cache
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\obj\Debug\procesos.exe
+C:\Users\CealeR\AppData\Local\Temporary Projects\procesos\obj\Debug\procesos.pdb
+C:\Users\CealeR\Desktop\procesos\procesos\bin\Debug\procesos.exe.config
+C:\Users\CealeR\Desktop\procesos\procesos\obj\Debug\procesos.exe
+C:\Users\CealeR\Desktop\procesos\procesos\obj\Debug\procesos.pdb
+C:\Users\CealeR\Desktop\procesos\procesos\bin\Debug\procesos.exe
+C:\Users\CealeR\Desktop\procesos\procesos\bin\Debug\procesos.pdb
+C:\Users\CealeR\Desktop\procesos\procesos\obj\Debug\procesos.csprojResolveAssemblyReference.cache
+C:\Users\CealeR\Desktop\procesos\procesos\obj\Debug\procesos.Form1.resources
+C:\Users\CealeR\Desktop\procesos\procesos\obj\Debug\procesos.Properties.Resources.resources
+C:\Users\CealeR\Desktop\procesos\procesos\obj\Debug\procesos.csproj.GenerateResource.Cache
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\bin\Debug\procesos.exe.config
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.exe
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.pdb
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\bin\Debug\procesos.exe
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\bin\Debug\procesos.pdb
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.Form1.resources
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.Properties.Resources.resources
+C:\Users\Cesar\Desktop\Nueva carpeta (2)\procesos\procesos\obj\Debug\procesos.csproj.GenerateResource.Cache
