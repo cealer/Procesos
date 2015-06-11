@@ -13,6 +13,8 @@ namespace procesos
 {
     public partial class Form1 : Form
     {
+        int asd = 2;
+
         public Form1()
         {
             InitializeComponent();
